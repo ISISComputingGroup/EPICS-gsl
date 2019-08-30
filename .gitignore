@@ -7,3 +7,4 @@ gsl.def
 /include/
 /install/
 O.*
+/dbd/
