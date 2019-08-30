@@ -1,0 +1,9 @@
+CMakeFiles
+build-*/
+gsl.def
+*.nupkg
+/bin/
+/lib/
+/include/
+/install/
+O.*
