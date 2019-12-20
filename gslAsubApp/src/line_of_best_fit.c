@@ -5,6 +5,7 @@
 #include <errlog.h>
 #include <menuFtype.h>
 #include <gsl/gsl_fit.h>
+#include <gsl/gsl_errno.h>
 
 /**
  * aSub wrapper around gsl_fit_linear.
@@ -25,6 +26,9 @@
  */
 static long line_of_best_fit(aSubRecord *prec)
 {
+    // Disable default error handler for GSL as it terminates the process. Check return values instead.
+    gsl_set_error_handler_off();
+    
     int status;
     
     if (prec->fta != menuFtypeDOUBLE || prec->ftb != menuFtypeDOUBLE)
