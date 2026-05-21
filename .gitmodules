@@ -1,0 +1,3 @@
+[submodule "gsl-src"]
+	path = gsl-src
+	url = https://github.com/ampl/gsl
